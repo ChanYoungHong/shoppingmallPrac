@@ -1,5 +1,9 @@
 package com.spharosacademy.jpa.project.spharosmvcandjpa.product.service.Impl;
 
+import com.spharosacademy.jpa.project.spharosmvcandjpa.category.entity.CategoryMiddle;
+import com.spharosacademy.jpa.project.spharosmvcandjpa.category.entity.CategoryProductList;
+import com.spharosacademy.jpa.project.spharosmvcandjpa.category.entity.CategorySmall;
+import com.spharosacademy.jpa.project.spharosmvcandjpa.category.entity.CategoryTop;
 import com.spharosacademy.jpa.project.spharosmvcandjpa.product.dto.response.ProductDetailOutputDto;
 import com.spharosacademy.jpa.project.spharosmvcandjpa.product.model.Product;
 import com.spharosacademy.jpa.project.spharosmvcandjpa.product.repo.ProductDetailImgeRepo;
@@ -15,6 +19,9 @@ public class ProductServiceImpl implements ProductService {
 
     private final ProductRepo productRepo;
     private final ProductDetailImgeRepo productDetailImgeRepo;
+    private final CategoryMiddle categoryMiddle;
+    private final CategorySmall categorySmall;
+    private final CategoryTop categoryTop;
 
     @Override
     public ProductDetailOutputDto getProduct(Long productId) {
@@ -36,6 +43,19 @@ public class ProductServiceImpl implements ProductService {
         return ProductDetailOutputDto.builder()
             .id(productRepo.findById(productId).get().getId())
             .build();
+    }
+
+    @Override
+    public Product addProduct(ProductDetailOutputDto productDetailOutputDto) {
+
+        Product product = productRepo.save(Product.builder()
+                .name(productDetailOutputDto.getName())
+                .price(productDetailOutputDto.getPrice())
+                .titleImgUrl(productDetailOutputDto.getTitleImgUrl())
+                .titleImgTxt(productDetailOutputDto.)
+            .build())
+
+        return null;
     }
 
 

@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,7 +17,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Setter
+@Builder
 public class Product {
 
     @Id
@@ -24,7 +25,8 @@ public class Product {
     private Long id;
     private String name;
     private int price;
-    private String titleImUrl;
+    private String titleImgUrl;
+    private String titleImgTxt;
     private String description;
     private String made;
 

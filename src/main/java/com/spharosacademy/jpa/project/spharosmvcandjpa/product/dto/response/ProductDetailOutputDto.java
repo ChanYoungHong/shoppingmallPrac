@@ -1,5 +1,6 @@
 package com.spharosacademy.jpa.project.spharosmvcandjpa.product.dto.response;
 
+import com.spharosacademy.jpa.project.spharosmvcandjpa.product.model.ProdcutImg;
 import com.spharosacademy.jpa.project.spharosmvcandjpa.product.model.ProductDetailImg;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -19,6 +20,11 @@ public class ProductDetailOutputDto {
     private String titleImgUrl;
     private String des;
     private String made;
+    List<ProdcutImg> productImgList;
     List<ProductDetailImg> productDetailImgList;
+    private int categoryTopId;
+    private int categoryMiddelId;
+    private int categorySmallId;
+
 
 }

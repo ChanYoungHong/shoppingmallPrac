@@ -6,8 +6,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
 public class CategoryProductList {
 
     @Id
@@ -16,6 +24,10 @@ public class CategoryProductList {
 
     @ManyToOne
     private CategorySmall categorySmall;
+    @ManyToOne
+    private CategoryTop categoryTop;
+    @ManyToOne
+    private CategoryMiddle categoryMiddle;
 
     @ManyToOne
     private Product product;
