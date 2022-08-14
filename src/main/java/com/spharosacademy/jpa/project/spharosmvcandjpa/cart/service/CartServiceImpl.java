@@ -12,22 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class CartServiceImpl implements CarService {
-
-    @Autowired
-    public CartServiceImpl(
-        UserRepoo userRepoo,
-        CartRepo cartRepo,
-        ProductRepo productRepo) {
-        this.userRepoo = userRepoo;
-        this.cartRepo = cartRepo;
-        this.productRepo = productRepo;
-    }
 
     private final UserRepoo userRepoo;
     private final CartRepo cartRepo;

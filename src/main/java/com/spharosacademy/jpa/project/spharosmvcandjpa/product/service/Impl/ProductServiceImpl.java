@@ -52,8 +52,8 @@ public class ProductServiceImpl implements ProductService {
                 .name(productDetailOutputDto.getName())
                 .price(productDetailOutputDto.getPrice())
                 .titleImgUrl(productDetailOutputDto.getTitleImgUrl())
-                .titleImgTxt(productDetailOutputDto.)
-            .build())
+                .titleImgTxt(productDetailOutputDto.getTitleImgTxt())
+            .build());
 
         return null;
     }

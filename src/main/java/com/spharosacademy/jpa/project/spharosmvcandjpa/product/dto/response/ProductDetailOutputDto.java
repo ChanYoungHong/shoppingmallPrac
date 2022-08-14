@@ -18,6 +18,7 @@ public class ProductDetailOutputDto {
     private String name;
     private int price;
     private String titleImgUrl;
+    private String titleImgTxt;
     private String des;
     private String made;
     List<ProdcutImg> productImgList;
