@@ -87,4 +87,17 @@ class MemoRepositoryTest {
 
         System.out.println(result);
     }
+
+//    @Test
+//    public void testPageDefault() {
+//
+//        Pageable pageable = (Pageable) PageRequest.of(0, 10);
+//
+//        Page<Memo> result = memoRepository.findAll(
+//            (org.springframework.data.domain.Pageable) pageable);
+//
+//        System.out.println(result);
+//
+//        System.out.println("====================================");
+//    }
 }
